@@ -13,12 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
+// Route::get('/', function () {
+//     return view('home');
+// });
+Route::get('/', 'MenuController@index');
 //menu frontend
-Route::get('/home', 'MenuController@home');
+Route::get('/home', 'MenuController@index');
 Route::get('/produk/{type}', 'MenuController@produk');
 Route::get('/about', 'MenuController@about');
 Route::get('/contact-us', 'MenuController@contact');
@@ -27,7 +27,7 @@ Route::get('/faq', 'MenuController@faq');
 Route::get('/service-center', 'MenuController@servicecenter');
 
 //halaman penggunan
-order, profil, login, logout, checkout, detail, pembayaran, batal, retur, checkout
+// order, profil, login, logout, checkout, detail, pembayaran, batal, retur, checkout
 
 //menu backend
 Route::get('/administrator', 'AdminController@home');
