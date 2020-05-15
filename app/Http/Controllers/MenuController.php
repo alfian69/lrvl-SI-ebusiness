@@ -9,8 +9,9 @@ class MenuController extends Controller
 	public function index(){
     	return view('home');
 	}
-	public function produk(){
-    	return view('produk');
+	public function produk($type){
+		return view('produk',['type' => $type]);
+    	// return view('produk');
 	}
 	public function contact(){
     	return view('contact-us');

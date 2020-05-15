@@ -1,3 +1,8 @@
+<?php
+use Illuminate\Support\Facades\DB;
+      // mengirim data pegawai ke view index
+    $type = DB::table('type')->get();
+?>
 <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
   <a class="navbar-brand" href="#">
     <!-- <img src="https://untag-sby.ac.id/assets/edu/extra-images/logo_2.png" style="width: 100px;"> -->
@@ -15,10 +20,15 @@
           Produk
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Kulkas</a>
-          <a class="dropdown-item" href="#">TV</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Radio</a>
+          <?php 
+           foreach ($type as $data) {
+            echo '
+              <a class="dropdown-item" href="/produk/'.$data->url.'">'.$data->nama.'</a>
+            ';
+             
+           }
+          ?>
+          <!-- <div class="dropdown-divider"></div> -->
         </div>
       </li>
       <li class="nav-item dropdown">

@@ -43,10 +43,6 @@
             <div class="carousel-item">
                 <img src="{{ url('/image/tv.png') }}" class="d-block" style="width: 100%; height: 90%;">
                 <div class="carousel-caption">
-                        <!-- <div class=''>
-                            <h4>A</h4>
-                            <p style='font-size: 16px;'>B</p>
-                        </div> -->
                     <div class="bg-wrapper" style="width: 100%; text-decoration: none;">
                         <div class="container">
                             <div class="row justify-content-around">

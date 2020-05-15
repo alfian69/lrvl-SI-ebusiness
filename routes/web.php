@@ -29,6 +29,16 @@ Route::get('/service-center', 'MenuController@servicecenter');
 //halaman penggunan
 // order, profil, login, logout, checkout, detail, pembayaran, batal, retur, checkout
 
+Route::get('/profil', 'ProfilController@index');
+Route::get('/profil/edit/{id}', 'ProfilController@edit');
+Route::post('/profil/update','ProfilController@update');
+
+Route::get('/order/{id}', 'OrderController@index');
+Route::get('/order/cart/{id}', 'OrderController@cart');
+Route::post('/order/detail','OrderController@detail');
+Route::post('/order/pembayaran','OrderController@pembayaran');
+Route::get('/order/checkout', 'OrderController@checkout');
+
 //menu backend
 Route::get('/administrator', 'AdminController@home');
 Route::get('/administrator/login', 'AdminController@login');
