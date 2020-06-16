@@ -29,19 +29,27 @@ Route::get('/service-center', 'MenuController@servicecenter');
 //halaman penggunan
 // order, profil, login, logout, checkout, detail, pembayaran, batal, retur, checkout
 
+Route::get('/masuk', 'ProfilController@masuk');
+Route::get('/daftar', 'ProfilController@daftar');
+Route::post('/checkmasuk', 'ProfilController@check');
+Route::post('/savedaftar', 'ProfilController@save');
+
 Route::get('/profil', 'ProfilController@index');
 Route::get('/profil/edit/{id}', 'ProfilController@edit');
 Route::post('/profil/update','ProfilController@update');
 
 Route::get('/order/{id}', 'OrderController@index');
 Route::get('/order/cart/{id}', 'OrderController@cart');
-Route::post('/order/detail','OrderController@detail');
-Route::post('/order/pembayaran','OrderController@pembayaran');
+Route::get('/order/detail','OrderController@detail');
+Route::get('/order/pembayaran','OrderController@pembayaran');
+// Route::post('/order/detail','OrderController@detail');
+// Route::post('/order/pembayaran','OrderController@pembayaran');
 Route::get('/order/checkout', 'OrderController@checkout');
 
 //menu backend
 Route::get('/administrator', 'AdminController@home');
 Route::get('/administrator/login', 'AdminController@login');
+Route::post('/administrator/check', 'AdminController@check');
 Route::get('/administrator/logout', 'AdminController@logout');
 Route::get('/administrator/profil', 'AdminController@profil');
 Route::get('/administrator/absen', 'AdminController@absen');
@@ -103,6 +111,14 @@ Route::get('/administrator/gaji/edit/{id}', 'GajiController@edit');
 Route::post('/administrator/gaji/update','GajiController@update');
 Route::get('/administrator/gaji/delete/{id}', 'GajiController@delete');
 
+Route::get('/administrator/absensi', 'AbsensiController@index');
+Route::get('/administrator/absensi/create', 'AbsensiController@create');
+Route::post('/administrator/absensi/save','AbsensiController@save');
+Route::get('/administrator/absensi/detail/{id}', 'AbsensiController@detail');
+Route::get('/administrator/absensi/edit/{id}', 'AbsensiController@edit');
+Route::post('/administrator/absensi/update','AbsensiController@update');
+Route::get('/administrator/absensi/delete/{id}', 'AbsensiController@delete');
+
 // Route::get('/', 'Controller@index');
 // Route::get('//create', 'Controller@create');
 // Route::post('//save','Controller@save');
@@ -111,9 +127,9 @@ Route::get('/administrator/gaji/delete/{id}', 'GajiController@delete');
 // Route::post('//update','Controller@update');
 // Route::get('//delete/{id}', 'Controller@delete');
 
-Auth::routes();
+// Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+// Route::get('/home', 'HomeController@index')->name('home');
 
 // Auth::routes();
 

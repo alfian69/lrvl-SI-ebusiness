@@ -2,7 +2,16 @@
 @section('page_name', 'Home')
 @section('content')
 
-<div class="row" style="background-color: #ddd; padding: 20px;">
+
+<style type="text/css">
+    #bg-gradien {
+      background-color: red; /* For browsers that do not support gradients */
+      background-image: linear-gradient(to bottom right, #fdd, #f77); /* Standard syntax (must be last) */
+      padding: 20px;
+    }
+</style>
+
+<div class="row" id="bg-gradien">
     <!-- slide 1 -->
     <div class="col-12">
         <h4 style="color: #994556;"> Product terbaru </h4>

@@ -23,7 +23,8 @@
             }
 
         ?>
-        <a href="/order/cart/{{ $product->id }}" class="btn btn-primary">Beli Sekarang</a>
+        <a href="/order/detail" class="btn btn-primary">Beli Sekarang</a>
+        <a href="/order/cart/{{ $product->id }}" class="btn btn-success">Tambah Ke Keranjang</a>
     </div>
 </div>
  

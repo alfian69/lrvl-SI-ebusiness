@@ -14,23 +14,29 @@ class OrderController extends Controller
     }
     public function cart($id)
     {
-    	$user_id = null;
-		DB::table('order')->insert([
-			'user_id' => $user_id,
-		]);
+  //   	$user_id = null;
+		// DB::table('order')->insert([
+		// 	'user_id' => $user_id,
+		// ]);
 		// alihkan halaman ke halaman pegawai
-		return redirect('/detail');
+		return redirect('home');
+        // return view('cart');
         // return view('order',['product' => $product]);
     }
-    public function detail($id)
+    public function detail()
     {
-    	$user_id = null;
-		DB::table('order')->insert([
-			'produk_id' => $id,
-			'user_id' => $user_id,
-		]);
+  //   	$user_id = null;
+		// DB::table('order')->insert([
+		// 	'produk_id' => $id,
+		// 	'user_id' => $user_id,
+		// ]);
 		// alihkan halaman ke halaman pegawai
-		return redirect('/detail');
+        return view('detail');
+		// return redirect('/detail');
         // return view('order',['product' => $product]);
+    }
+    public function pembayaran()
+    {
+        return view('pembayaran');
     }
 }

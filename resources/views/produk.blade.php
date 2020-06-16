@@ -21,7 +21,7 @@ $product = DB::table('produk')->where('type_id', $type_view->id)->get();
                         <img src="{{ url('/image/product/').'/'.$data->gambar_url }}" style="width: 200px; height: 200px; object-fit: cover; padding: 2px;">
                     </div>
                     <div class="product-text" style="margin: 5px;">
-                        <?= $data->nama ?><br />
+                        <p style="width: 100%;"><?= $data->nama ?></p>
                         <p style="color: #5969f0; font-weight: bold;"><?= $data->harga ?></p>
                     </div>
                 </div>

@@ -50,7 +50,28 @@ use Illuminate\Support\Facades\DB;
     </ul>
     <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-light my-2 my-sm-0" type="submit">Search</button>
+      <!-- <button class="btn btn-light my-2 my-sm-0" type="submit">Search</button> -->
     </form>
+    <!-- Example single danger button -->
+    <div class="btn-group">
+      <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Akun
+      </button>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="/daftar">Daftar</a>
+        <a class="dropdown-item" href="/masuk">Masuk</a>
+      </div>
+    </div>
+    <!-- <ul class="navbar-nav mr-auto form-inline my-2 my-lg-0">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Akun
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="/contact-us">Masuk</a>
+          <a class="dropdown-item" href="/faq">Daftar</a>
+        </div>
+      </li>
+    </ul> -->
   </div>
 </nav>

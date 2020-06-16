@@ -16,6 +16,15 @@ class MenuController extends Controller
 	public function contact(){
     	return view('contact-us');
 	}
+	public function privacypolicy(){
+    	return view('privacy-policy');
+	}
+	public function faq(){
+    	return view('faq');
+	}
+	public function servicecenter(){
+    	return view('service-center');
+	}
 	public function about(){
     	return view('about');
 	}
